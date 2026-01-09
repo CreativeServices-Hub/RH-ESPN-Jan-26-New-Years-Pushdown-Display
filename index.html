@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UAP Showcase</title>
+
+  <link rel="icon" href="gkb-espn.png">
+  <meta property="og:title" content="UAP Showcase">
+  <meta property="og:description" content="All units at true pixel size. Click Open to view any unit alone.">
+  <meta property="og:image" content="gkb-espn.png">
+
+  <style>
+    :root { --bg:#edeef0; --text:#0b0c10; --muted:#6b7280; }
+    * { box-sizing:border-box; }
+    html, body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+
+    /* Header */
+    header {
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;
+      padding:24px 36px 18px;
+      text-align:left;
+    }
+    .brandline {
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .brandline img.logo-lockup { height:90px; width:auto; display:block; }
+    .brandline h1 {
+      margin:0;
+      font-family:"Century Gothic","AppleGothic",sans-serif;
+      font-size:56px;
+      line-height:1.1;
+      letter-spacing:.2px;
+      font-weight:800;
+    }
+    .subline {
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* Layout */
+    .page { padding:0 36px 80px; }
+    .col {
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      width:max-content;
+    }
+    .stack { display:flex; flex-direction:column; gap:16px; }
+    .card { width:max-content; }
+
+    /* KEY: do not force any color on the creatives */
+    iframe {
+      display:block;
+      border:0;
+      overflow:hidden;
+      background:transparent; /* whatever the creative does wins */
+    }
+
+    /* Buttons */
+    .btn {
+      appearance:none;
+      border:2px solid #000;
+      background:#000;
+      color:#fff;
+      border-radius:999px;
+      padding:10px 16px;
+      font-size:13px;
+      text-decoration:none;
+      cursor:pointer;
+      transition:transform .08s ease, opacity .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover { transform:translateY(-1px); opacity:1; }
+    .btn:active { transform:translateY(0); }
+
+    .open-row {
+      display:block;
+      margin:30px 0; /* 30px above and below */
+    }
+
+    .sep {
+      height:3px;
+      background:#111;
+      margin:34px 0;
+      opacity:.9;
+    }
+
+    /* Fixed widths for separator length */
+    .w-1280 { width:1280px; }
+    .w-970  { width:970px; }
+    .w-728  { width:728px; }
+    .w-320  { width:320px; }
+
+    /* Footer */
+    .powered-footer {
+      margin-top:80px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:12px;
+      opacity:.9;
+    }
+    .powered-footer span {
+      color:var(--muted);
+      font-size:16px;
+      font-weight:500;
+    }
+    .powered-footer img.brandworks { height:150px; width:auto; display:block; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brandline">
+      <img class="logo-lockup" src="gkb-espn.png" alt="GKB / ESPN" />
+      <h1 id="dynamicTitle">UAP Showcase</h1>
+    </div>
+    <p class="subline">Open to view any unit alone in a new tab.</p>
+  </header>
+
+  <div class="page">
+    <div class="col">
+
+      <!-- 1280x418 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/1280x418/1280x418.html"
+            width="1280"
+            height="418"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-1280">
+            <a class="btn" href="uaps/1280x418/1280x418.html" target="_blank" rel="noopener">
+              Open 1280×418
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1280x100 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/1280x100/1280x100.html"
+            width="1280"
+            height="100"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-1280">
+            <a class="btn" href="uaps/1280x100/1280x100.html" target="_blank" rel="noopener">
+              Open 1280×100
+            </a>
+          </div>
+        </div>
+        <div class="sep w-1280"></div>
+      </div>
+
+      <!-- 970x250 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/970x250/970x250.html"
+            width="970"
+            height="250"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-970">
+            <a class="btn" href="uaps/970x250/970x250.html" target="_blank" rel="noopener">
+              Open 970×250
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 970x66 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/970x66/970x66.html"
+            width="970"
+            height="66"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-970">
+            <a class="btn" href="uaps/970x66/970x66.html" target="_blank" rel="noopener">
+              Open 970×66
+            </a>
+          </div>
+        </div>
+        <div class="sep w-970"></div>
+      </div>
+
+      <!-- 728x250 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/728x250/728x250.html"
+            width="728"
+            height="250"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-728">
+            <a class="btn" href="uaps/728x250/728x250.html" target="_blank" rel="noopener">
+              Open 728×250
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 728x90 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/728x90/728x90.html"
+            width="728"
+            height="90"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-728">
+            <a class="btn" href="uaps/728x90/728x90.html" target="_blank" rel="noopener">
+              Open 728×90
+            </a>
+          </div>
+        </div>
+        <div class="sep w-728"></div>
+      </div>
+
+      <!-- 320x250 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/320x250/320x250.html"
+            width="320"
+            height="250"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-320">
+            <a class="btn" href="uaps/320x250/320x250.html" target="_blank" rel="noopener">
+              Open 320×250
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 320x50 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/320x50/320x50.html"
+            width="320"
+            height="50"
+            scrolling="no">
+          </iframe>
+          <div class="open-row w-320">
+            <a class="btn" href="uaps/320x50/320x50.html" target="_blank" rel="noopener">
+              Open 320×50
+            </a>
+          </div>
+        </div>
+        <div class="sep w-320"></div>
+      </div>
+
+      <!-- 300x250 -->
+      <div class="stack">
+        <div class="card">
+          <iframe
+            src="uaps/300x250/300x250.html"
+            width="300"
+            height="250"
+            scrolling="no">
+          </iframe>
+          <div class="open-row" style="width:300px">
+            <a class="btn" href="uaps/300x250/300x250.html" target="_blank" rel="noopener">
+              Open 300×250
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="powered-footer">
+        <span>powered by</span>
+        <img class="brandworks" src="brandworks.png" alt="Brandworks" />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Optional: dynamic title from repo name or ?title= -->
+  <script>
+    (function() {
+      const h1 = document.getElementById('dynamicTitle');
+      if (!h1) return;
+      const params = new URLSearchParams(location.search);
+      const t = params.get('title');
+      if (t) { const s = decodeURIComponent(t); h1.textContent = s; document.title = s; return; }
+      const parts = location.pathname.split('/').filter(Boolean);
+      const repo = location.hostname.endsWith('.github.io')
+        ? (parts[0] || '')
+        : (parts[1] || parts[0] || '');
+      if (repo) {
+        const cleaned = repo.replace(/^UAP[-–]\s*/i,'')
+                            .replace(/^UAP-Display[-–]\s*/i,'')
+                            .replace(/[-_]/g,' ')
+                            .trim();
+        if (cleaned) { h1.textContent = cleaned; document.title = cleaned; }
+      }
+    })();
+  </script>
+</body>
+</html>
